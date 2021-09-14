@@ -1,0 +1,1099 @@
+/*!
+ * Bootstrap 4.3
+ * Copyright 2019 - Alejandro Alberto Sánchez Iturriaga.
+ */
+
+/* Se definen las variables de los colores principales. */
+:root {
+	--person-primary: #4682B4;
+	--person-secondary: #191970;
+	--student-primary: #FFA500;
+	--student-secondary: #C73500;
+}
+
+p {
+	font-family: 'Verdana';
+	font-size: small;
+}
+
+span,
+small {
+	font-family: 'Amaranth';
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Righteous';
+}
+
+/* Tamaño para resoluciones hasta un máximo de 576 pixeles de ancho. */
+@media (max-width: 576px) {
+
+	h1 {
+		font-size: 1.8em;
+	}
+}
+
+h5,
+h6 {
+	font-family: 'Russo One';
+}
+
+
+/* Tamaño para resoluciones hasta un máximo de 600 pixeles de alto. */
+@media (max-height: 600px) {
+
+	header {
+		padding-top: 2.5rem;
+		padding-bottom: 0rem;
+	}
+
+	main {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	section {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	footer {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+/* Tamaño para resoluciones hasta un máximo de 700 pixeles de alto. */
+@media (min-height: 601px) {
+
+	header {
+		padding-top: 3.5rem;
+		padding-bottom: 0rem;
+	}
+
+	main {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	section {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	footer {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+/* Tamaño para resoluciones hasta un máximo de 800 pixeles de alto. */
+@media (min-height: 701px) {
+
+	header {
+		padding-top: 5.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	main {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+
+	section {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+
+	footer {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+/* Tamaño para resoluciones hasta un máximo de 1024 pixeles de alto. */
+@media (min-height: 801px) {
+
+	header {
+		padding-top: 7rem;
+		padding-bottom: 2rem;
+	}
+
+	main {
+		padding-top: 6.5rem;
+		padding-bottom: 6.5rem;
+	}
+
+	section {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+	}
+
+	footer {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+/* Tamaño para resoluciones hasta un máximo de 1080 pixeles de alto. */
+@media (min-height: 1025px) {
+
+	header {
+		padding-top: 7.5rem;
+		padding-bottom: 4rem;
+	}
+
+	main {
+		padding-top: 6.5rem;
+		padding-bottom: 6.5rem;
+	}
+
+	section {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+	}
+
+	footer {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+/* Tamaño para resoluciones hasta un máximo de 1366 pixeles de alto. */
+@media (min-height: 1081px) {
+
+	header {
+		padding-top: 7.5rem;
+		padding-bottom: 5rem;
+	}
+
+	main {
+		padding-top: 10rem;
+		padding-bottom: 18rem;
+	}
+
+	section {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+
+	footer {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+/* Tamaño para resoluciones hasta un máximo de 1920 pixeles de alto. */
+@media (min-height: 1367px) {
+
+	header {
+		padding-top: 10rem;
+		padding-bottom: 5rem;
+	}
+
+	main {
+		padding-top: 18rem;
+		padding-bottom: 25rem;
+	}
+
+	section {
+		padding-top: 6.5rem;
+		padding-bottom: 8rem;
+	}
+
+	footer {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+		text-align: center;
+		color: #fff;
+	}
+}
+
+/* Botón de retroceso a la página anterior. */
+.back-button {
+	display: scroll;
+	font-size: 40px;
+	color: black;
+	opacity: 0.3;
+	cursor: pointer;
+	position: fixed;
+	z-index: 1;
+	bottom: 10px;
+	left: 10px;
+}
+
+/* Botón de flecha para desplazarse hacia arriba de la página. */
+.scroll-up {
+	display: none;
+	background-repeat: no-repeat;
+	font-size: 40px;
+	color: black;
+	opacity: 0.3;
+	cursor: pointer;
+	position: fixed;
+	z-index: 1;
+	bottom: 10px;
+	right: 10px;
+}
+
+hr.star-person,
+hr.star-student {
+	max-width: 15rem;
+	padding: 0;
+	text-align: center;
+	border: none;
+	border-top: solid 0.25rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+hr.star-person:after,
+hr.star-student:after {
+	position: relative;
+	top: -.8em;
+	display: inline-block;
+	padding: 0 0.25em;
+	content: '\f290';
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 2em;
+}
+
+hr.star-person {
+	border-color: var(--person-secondary);
+}
+
+hr.star-person:after {
+	color: var(--person-secondary);
+	background-color: white;
+}
+
+hr.star-student {
+	border-color: var(--student-secondary); 
+}
+
+hr.star-student:after {
+	color: var(--student-secondary); 
+	background-color: white;
+}
+
+/* Relleno de espaciado para mejor funcionamiento del "nav-index". */
+.padding-for-nav {
+	padding-top: 8rem;
+}
+
+@media (min-width: 768px) {
+
+	.padding-for-nav {
+		padding-top: 10rem;
+		margin-bottom: 10rem;
+	}
+}
+
+/* Navegador principal del index. */
+#nav-index {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-family: 'Russo One';
+	background-color: var(--person-primary); 
+}
+
+#nav-index .nav-pills li.nav-item a.nav-link {
+	padding: 1rem;
+	color: #fff;
+	background-color: var(--person-primary);
+}
+
+#nav-index .nav-pills li.nav-item a.nav-link:hover {
+	color: var(--person-secondary);
+	background-color: var(--person-primary);
+	cursor: pointer;
+}
+
+#nav-index .nav-pills li.nav-item a.nav-link:focus,
+#nav-index .nav-pills li.nav-item a.nav-link:active,
+#nav-index .nav-pills li.nav-item a.nav-link.active {
+	color: #fff;
+	background-color: var(--person-secondary);
+	cursor: pointer;
+}
+
+#nav-index-dropdown a.nav-link {
+	color: #fff;
+	background-color: var(--person-primary) !important;
+}
+
+#nav-index-dropdown a.nav-link:hover,
+#nav-index-dropdown a.nav-link:focus,
+#nav-index-dropdown a.nav-link:active,
+#nav-index-dropdown a.nav-link.active {
+	color: var(--person-secondary) !important;
+	cursor: pointer;
+}
+
+#nav-index-dropdown .dropdown-menu {
+	background-color: var(--person-primary) !important;
+}
+
+#nav-index-dropdown .dropdown-menu a.dropdown-item {
+	color: #fff;
+	background-color: var(--person-primary) !important;
+}
+
+#nav-index-dropdown .dropdown-menu a.dropdown-item:hover,
+#nav-index-dropdown .dropdown-menu a.dropdown-item:focus,
+#nav-index-dropdown .dropdown-menu a.dropdown-item:active,
+#nav-index-dropdown .dropdown-menu a.dropdown-item.active {
+	color: var(--person-secondary);
+	cursor: pointer;
+}
+
+@media (max-width: 576px) {
+
+	#nav-index {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		font-family: 'Russo One';
+		background-color: var(--person-primary); 
+	}
+}
+
+@media (min-width: 992px) {
+	
+	#nav-index {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		font-family: 'Russo One';
+		background-color: var(--person-primary); 
+	}
+}
+
+/* Navegador por defecto (Administrador, Profesor y Apoderado). */
+#nav-person {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: var(--person-primary); 
+}
+
+#nav-person .navbar-brand {
+	font-family: 'Monoton';
+	font-size: x-large;
+	color: #fff;
+}
+
+#nav-person .navbar-nav li.nav-item a.nav-link {
+	font-family: 'Russo One';
+	color: #fff;
+}
+
+#nav-person .navbar-nav li.nav-item a.nav-link:hover,
+#nav-person .navbar-nav li.nav-item a.nav-link:focus,
+#nav-person .navbar-nav li.nav-item a.nav-link:active,
+#nav-person .navbar-nav li.nav-item a.nav-link.active {
+	color: var(--person-secondary);
+	cursor: pointer;
+}
+
+#nav-person .navbar-toggler {
+	font-family: 'Russo One';
+	font-size: 60%;
+	padding: 0.5rem;
+}
+
+@media (max-width: 576px) {
+
+	#nav-person .navbar-brand {
+		font-family: 'Monoton';
+		font-size: large;
+		color: #fff;
+	}
+
+	#nav-person .navbar-collapse {
+		font-family: 'Russo One';
+		font-size: small;
+	}
+}
+
+@media (min-width: 992px) {
+	
+	#nav-person {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		background-color: var(--person-primary); 
+	}
+
+	#nav-person .navbar-brand {
+		font-family: 'Monoton';
+		font-size: xx-large;
+		color: #fff;
+	}
+
+	#nav-person .navbar-toggler {
+		font-family: 'Russo One';
+		font-size: 80%;
+		padding: 1rem;
+	}
+}
+
+/* Navegador para el Estudiante. */
+#nav-student {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: var(--student-primary); 
+}
+
+#nav-student .navbar-brand {
+	font-family: 'Monoton';
+	font-size: x-large;
+	color: #fff;
+}
+
+#nav-student .navbar-nav li.nav-item a.nav-link {
+	font-family: 'Russo One';
+	color: #fff;
+}
+
+#nav-student .navbar-nav li.nav-item a.nav-link:hover,
+#nav-student .navbar-nav li.nav-item a.nav-link:focus,
+#nav-student .navbar-nav li.nav-item a.nav-link:active,
+#nav-student .navbar-nav li.nav-item a.nav-link.active {
+	color: var(--student-secondary);
+	cursor: pointer;
+}
+
+#nav-student .navbar-toggler {
+	font-family: 'Russo One';
+	font-size: 60%;
+	padding: 0.5rem;
+}
+
+@media (max-width: 576px) {
+
+	#nav-student .navbar-brand {
+		font-family: 'Monoton';
+		font-size: large;
+		color: #fff;
+	}
+
+	#nav-student .navbar-collapse {
+		font-family: 'Russo One';
+		font-size: small;
+	}
+}
+
+@media (min-width: 992px) {
+	
+	#nav-student {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		background-color: var(--student-primary); 
+	}
+
+	#nav-student .navbar-brand {
+		font-family: 'Monoton';
+		font-size: xx-large;
+		color: #fff;
+	}
+
+	#nav-student .navbar-toggler {
+		font-family: 'Russo One';
+		font-size: 80%;
+		padding: 1rem;
+	}
+}
+
+/* Navegador de pestañas por defecto (Administrador, Profesor y Apoderado). */
+#nav-tabs-person li.nav-item a.nav-link {
+	font-family: 'Russo One';
+	color: gray;
+}
+
+#nav-tabs-person li.nav-item a.nav-link:hover,
+#nav-tabs-person li.nav-item a.nav-link:focus,
+#nav-tabs-person li.nav-item a.nav-link:active,
+#nav-tabs-person li.nav-item a.nav-link.active {
+	color: var(--person-secondary);
+	cursor: pointer;
+}
+
+/* Collapse de acordión para el Estudiante. */
+#accordion-student div.card div.card-header a.card-link {
+	font-family: 'Russo One';
+	color: var(--student-secondary);
+}
+
+#accordion-student div.card div.card-header a.card-link:hover,
+#accordion-student div.card div.card-header a.card-link:focus,
+#accordion-student div.card div.card-header a.card-link:active,
+#accordion-student div.card div.card-header a.card-link.active {
+	color: var(--student-primary);
+	cursor: pointer;
+}
+
+/* Estilo para link de descarga del tipo etiqueta "<a>" e "<i>". */
+a.link-download i {
+	color: var(--person-primary);
+}
+
+a.link-download i:hover,
+a.link-download i:focus,
+a.link-download i:active,
+a.link-download i.active {
+	color: var(--person-secondary);
+	cursor: pointer;
+}
+
+/* Nuevos estilos para background. */
+.bg-person {
+	background-color: var(--person-primary);
+}
+
+.bg-person-lite {
+	background-color: rgba(0,0,0,.03);
+	border: 1px solid rgba(0,0,0,.125);
+}
+
+.bg-student {
+	background-color: var(--student-primary);
+}
+
+/* Nuevos estilos para textos. */
+.text-person {
+	color: var(--person-secondary); 
+}
+
+.text-student {
+	color: var(--student-secondary); 
+}
+
+/* Nuevos estilos para botones. */
+.btn {
+	font-family: 'Amaranth';
+}
+
+.btn-person { 
+	color: #ffffff; 
+	background-color: var(--person-primary);
+	border-color: var(--person-primary);
+} 
+ 
+.btn-person:hover, 
+.btn-person:focus, 
+.btn-person:active, 
+.btn-person.active, 
+.open .dropdown-toggle.btn-person { 
+	color: #ffffff; 
+	background-color: var(--person-secondary); 
+	border-color: var(--person-primary); 
+} 
+ 
+.btn-person:active, 
+.btn-person.active, 
+.open .dropdown-toggle.btn-person { 
+	background-image: none; 
+} 
+ 
+.btn-person.disabled, 
+.btn-person[disabled], 
+fieldset[disabled] .btn-person, 
+.btn-person.disabled:hover, 
+.btn-person[disabled]:hover, 
+fieldset[disabled] .btn-person:hover, 
+.btn-person.disabled:focus, 
+.btn-person[disabled]:focus, 
+fieldset[disabled] .btn-person:focus, 
+.btn-person.disabled:active, 
+.btn-person[disabled]:active, 
+fieldset[disabled] .btn-person:active, 
+.btn-person.disabled.active, 
+.btn-person[disabled].active, 
+fieldset[disabled] .btn-person.active { 
+	background-color: var(--person-primary);
+	border-color: var(--person-primary);
+}
+ 
+.btn-person .badge { 
+	color: var(--person-primary);
+	background-color: #ffffff; 
+}
+
+.btn-student { 
+	color: #ffffff; 
+	background-color: var(--student-primary); 
+	border-color: var(--student-primary);
+}
+ 
+.btn-student:hover, 
+.btn-student:focus, 
+.btn-student:active, 
+.btn-student.active, 
+.open .dropdown-toggle.btn-student { 
+	color: #ffffff; 
+	background-color: var(--student-secondary); 
+	border-color: var(--student-primary);
+} 
+ 
+.btn-student:active, 
+.btn-student.active, 
+.open .dropdown-toggle.btn-student { 
+	background-image: none; 
+} 
+ 
+.btn-student.disabled, 
+.btn-student[disabled], 
+fieldset[disabled] .btn-student, 
+.btn-student.disabled:hover, 
+.btn-student[disabled]:hover, 
+fieldset[disabled] .btn-student:hover, 
+.btn-student.disabled:focus, 
+.btn-student[disabled]:focus, 
+fieldset[disabled] .btn-student:focus, 
+.btn-student.disabled:active, 
+.btn-student[disabled]:active, 
+fieldset[disabled] .btn-student:active, 
+.btn-student.disabled.active, 
+.btn-student[disabled].active, 
+fieldset[disabled] .btn-student.active { 
+	background-color: var(--student-primary);
+	border-color: var(--student-primary);
+} 
+ 
+.btn-student .badge { 
+	color: var(--student-primary);
+	background-color: #ffffff; 
+}
+
+.icono-size {
+	font-size: 50px;
+}
+
+/* Tamaño para resoluciones hasta un máximo de 450 pixeles de ancho. */
+@media (max-width: 450px) {
+	.icono-size {
+		font-size: 25px;
+	}
+}
+
+/* Deshabilitar propiedad de redimenzionarse. */
+textarea {
+	resize: none;
+}
+
+.row-data {
+	padding: 1rem;
+	align-items: center;
+}
+
+.card-row-data {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	align-items: center;
+}
+
+/* Tamaño para resoluciones hasta un máximo de 450 pixeles de ancho. */
+@media (max-width: 450px) {
+	#canvas_avatar {
+		width: 100%;
+	}
+
+	.avatar-image-width {
+		width: 100%;
+	}
+
+	.avatar-icon-width {
+		width: 100%;
+	}
+}
+
+/* Tamaño para resoluciones hasta un mínimo de 451 pixeles de ancho. */
+@media (min-width: 451px) {
+	#canvas_avatar {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+	.avatar-image-width {
+		width: 400px;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.avatar-icon-width {
+		width: 200px;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* Scroll vertical para las actividades asignadas al alumno y para el inventario de ítems del avatar. */
+.activities-scroll {
+	height: 590px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.inventory-scroll {
+	height: 555px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/* Estilos para los ítems del módulo modificar avatar. */
+@media (max-width: 575px) {
+
+	.item-box {
+		border: 2px solid #CCCCCC;
+		overflow: hidden;    
+		width: 150px;
+		height: 150px;
+	}
+}
+
+@media (min-width: 576px) {
+
+	.item-box {
+		border: 2px solid #CCCCCC;
+		overflow: hidden;    
+		width: 90px;
+		height: 90px;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.item-box {
+		border: 2px solid #CCCCCC;
+		overflow: hidden;    
+		width: 110px;
+		height: 110px;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.item-box {
+		border: 2px solid #CCCCCC;
+		overflow: hidden;    
+		width: 90px;
+		height: 90px;
+	}
+}
+
+.item-box:hover,
+.item-box:focus,
+.item-box:active,
+.item-box.active {
+	border-color: var(--student-secondary);
+	cursor: pointer;
+}
+
+.item-icono {
+	width: 100%;
+	height: 100%;
+}
+
+/* Estilos para los ítems de los módulos de canjear recompensa. */
+.item-card {
+	border: 0;
+}
+
+.item-card:hover,
+.item-card:focus,
+.item-card:active,
+.item-card.active {
+	border: 2px solid var(--student-secondary);
+	cursor: pointer;
+}
+
+/* Estilos para la cuenta regresiva de la fecha de término de temporada. */
+.countdown-container {
+	background-color: var(--student-primary);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.countdown-container .number {
+	font-size: 25px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: var(--student-secondary);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.countdown-container .concept {
+	font-size: 15px;
+	text-align: center;
+	color: var(--student-secondary);
+}
+
+/* Hace la imágenes del owl-carousel "galeria" full responsive. */
+#carousel_galeria .owl-stage img {
+	width: 100%;
+	height: 100%;
+}
+
+/* Estilo para centrar verticalmente y horizontalmente los elementos del owl-carousel "items" y "ranking". */
+#carousel_items .owl-stage,
+#carousel_ranking .owl-stage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Estilo para la configuración del spinner de carga antes de mostrar el contenido de las páginas. */
+#spinner {
+	position: fixed;
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	background-color: #ffffff;
+	top: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Estilo para el título de la actividad en resoluciones pequeñas. */
+@media (max-width: 768px) {
+
+	h4#titulo {
+		font-size: 1em;
+	}
+}
+
+/* Estilos para mostrar y ocultar la actividad, si la resolución no es la adecuada. */
+.activity-visibility-info {
+	display: none;
+}
+
+.activity-visibility {
+	display: block;
+}
+
+@media (max-width: 550px) {
+
+	.activity-visibility-info {
+		display: block;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		height: 300px;
+	}
+
+	.activity-visibility {
+		display: none;
+	}
+}
+
+/* Estilos para las nubes de información de la actividad que muestra la instrucción, comentarios y el resultado. */
+.cloud-image {
+	background-image: url(../../images/actividad/nube-1.png);
+	background-repeat: no-repeat;
+	background-size: 100% 500px;
+	height: 500px;
+}
+
+.cloud-data {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 3rem;
+}
+
+@media (max-width: 768px) {
+
+	.cloud-data #resultado {
+		font-size: 0.7em;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.cloud-data {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		padding-left: 2rem;
+		padding-right: 5rem;
+	}
+}
+
+@media (min-width: 992px) {
+
+	.cloud-data {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		padding-left: 2rem;
+		padding-right: 7rem;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.cloud-data {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		padding-left: 2rem;
+		padding-right: 8rem;
+	}
+}
+
+.cloud-image2 {
+	background-image: url(../../images/actividad/nube-2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 140px;
+	height: 140px;
+}
+
+.cloud-data2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 0rem;
+	padding-bottom: 1rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
+}
+
+/* Estilos para los canvas que se utilizan en el desarrollo de la actividad. */
+#canvas_avatar1,
+#canvas_avatar3 {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+@media (max-width: 768px) {
+
+	#canvas_avatar2 {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+}
+
+@media (min-width: 769px) {
+
+	#canvas_avatar2 {
+		width: 100%;
+	}
+}
+
+#canvas_actividad {
+	width: 100%;
+}
+
+/* Estilos para los componentes de información de la actividad interna en desarrollo. */
+p#comentario {
+	font-size: 0.7em;
+}
+
+#accordion-student .card .card-header,
+#accordion-student .card .card-body {
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+
+	#accordion-student .card .card-header,
+	#accordion-student .card .card-body {
+		padding: 0rem;
+	}
+
+	#actividad-data {
+		font-size: 0.7em;
+	}
+}
+
+@media (min-width: 769px) {
+
+	#accordion-student .card .card-header,
+	#accordion-student .card .card-body {
+		padding-left: 0.2rem;
+		padding-right: 0.2rem;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+	#actividad-data {
+		font-size: small;
+	}
+}
+
+/* Estilos cuando se activa el fullscreen en los exploradores Chrome, Safari y Opera. */
+:-webkit-full-screen {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/* Estilos cuando se activa el fullscreen en el explorador Firefox. */
+:-moz-full-screen {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/* Estilos cuando se activa el fullscreen en los exploradores IE y Edge. */
+:-ms-fullscreen {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/* Estilos cuando se activa el fullscreen en el explorador Standard. */
+:fullscreen {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/* Estilos para cuando pasa el cursor por la tabla del dataTable. */
+#tabla-selector tr td:hover {
+	background-color: var(--person-secondary);
+	color: #ffffff; 
+	cursor: pointer;
+}
+
+/* Estilos para cuando se acciona el botón de herramientas del datatable. */
+.action-button i {
+	color: var(--person-primary);
+}
+
+.action-button i:hover, 
+.action-button i:focus, 
+.action-button i:active, 
+.action-button i.active {
+	color: var(--person-secondary);
+	cursor: pointer;
+}
+
