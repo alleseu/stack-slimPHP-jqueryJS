@@ -16,7 +16,11 @@ $(function() {
         responsive: true,
 		ajax: {
 			url: URL_BASE+'api/productos',
-			type: 'GET',
+			method: 'GET',
+			crossDomain: true,
+			headers: {
+				'Authorization': TOKEN
+			},
 			error: function(jqXHR, exception) {
 				console.log(jqXHR, exception);
 
@@ -84,7 +88,11 @@ $(function() {
 
 		$.ajax({
 			url: URL_BASE+'api/categorias',
-			type: 'GET',
+			method: 'GET',
+			crossDomain: true,
+			headers: {
+				'Authorization': TOKEN
+			},
 			dataType: 'json'
 
 		}).done(function(response) {
@@ -129,7 +137,11 @@ $(function() {
 
         $.ajax({
 			url: URL_BASE+'api/categorias',
-			type: 'GET',
+			method: 'GET',
+			crossDomain: true,
+			headers: {
+				'Authorization': TOKEN
+			},
 			dataType: 'json'
 	
 		}).done(function(response) {
@@ -147,7 +159,11 @@ $(function() {
 
 				$.ajax({
 					url: URL_BASE+'api/producto/'+ID,
-					type: 'GET',
+					method: 'GET',
+					crossDomain: true,
+					headers: {
+						'Authorization': TOKEN
+					},
 					dataType: 'json'
 			
 				}).done(function(response) {
@@ -197,7 +213,11 @@ $(function() {
 
         $.ajax({
 			url: URL_BASE+'api/producto/'+ID,
-			type: 'GET',
+			method: 'GET',
+			crossDomain: true,
+			headers: {
+				'Authorization': TOKEN
+			},
 			dataType: 'json'
 	
 		}).done(function(response) {
@@ -242,7 +262,11 @@ $(function() {
 
 		$.ajax({
 			url: URL_BASE+'api/producto',
-			type: 'POST',
+			method: 'POST',
+			crossDomain: true,
+			headers: {
+				'Authorization': TOKEN
+			},
 			contentType: 'application/json',
 			data: JSON.stringify(parametros),
 			dataType: 'json'
@@ -293,7 +317,11 @@ $(function() {
 
 		$.ajax({
 			url: URL_BASE+'api/producto/'+ID,
-			type: 'PUT',
+			method: 'PUT',
+			crossDomain: true,
+			headers: {
+				'Authorization': TOKEN
+			},
 			contentType: 'application/json',
 			data: JSON.stringify(parametros),
 			dataType: 'json'
@@ -336,7 +364,11 @@ $(function() {
 
 		$.ajax({
 			url: URL_BASE+'api/producto/'+ID,
-			type: 'DELETE',
+			method: 'DELETE',
+			crossDomain: true,
+			headers: {
+				'Authorization': TOKEN
+			},
 			dataType: 'json'
 
 		}).done(function(response) {

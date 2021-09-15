@@ -1,6 +1,6 @@
-# Aplicación Web - STACK: PHP Slim 4 Framework + JQUERY JS
+# Aplicación Web - Stack: PHP Slim 4 Framework + JS jQuery
 - Autor: `Alejandro Alberto Sánchez Iturriaga`
-- Fecha de actualización: `14-09-2021`
+- Fecha de actualización: `15-09-2021`
 - PHP versión: `7.4.10`
 - Slim versión: `4.5`
 - jQuery versión: `3.5.1`
@@ -24,7 +24,7 @@ ___
 - (https://learn.jquery.com/)  Centro de aprendizaje de jQuery.
 - (https://api.jquery.com/)  Documentación de jQuery Core.
 - (https://github.com/jquery/jquery)  Código fuente de la biblioteca de JavaScript jQuery.
-- (http://www.slimframework.com/)  Sitio oficial del framework Slim PHP.
+- (https://www.slimframework.com/)  Sitio oficial del framework Slim PHP.
 - (https://php-di.org/)  Sitio oficial del contenedor de inyección de dependencia para humanos.
 - (https://github.com/luispastendev/Slim4-Skeleton)  Esqueleto para el framework Slim 4.
 - (https://github.com/Seldaek/monolog/)  Biblioteca para registrar errores, que cumple con el estándar PSR-3.
