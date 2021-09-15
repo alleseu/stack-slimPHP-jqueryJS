@@ -33,9 +33,8 @@ require __DIR__ . "/Routes.php";
 require __DIR__ . "/Models.php";
 
 
-//Agrega los Middlewares de cierre.
+//Agrega el Middleware de cierre.
 $app->add($beforeMiddleware);
-//$app->add($afterMiddleware);
 
 //Agrega el Middleware de error con Logger, genera un archivo log.
 $logger = $container->get('logger_files');

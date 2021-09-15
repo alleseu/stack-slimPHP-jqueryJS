@@ -11,7 +11,7 @@ class MantenedorController extends BaseController {
 		//LLAMA A LA FUNCIÓN QUE OBTIENE TODOS LOS PRODUCTOS. (SI NO HAY PRODUCTOS, RETORNA VACÍO).
 		$data = $this->container->get('modelo_producto')->obtenerTodo();
 
-		$respuesta = ['data' => $data];
+		$respuesta['data'] = $data;
 		
 		$response->getBody()->write(json_encode($respuesta));
 		return $response
