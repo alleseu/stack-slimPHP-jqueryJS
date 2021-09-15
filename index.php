@@ -1,4 +1,4 @@
 <?php
-    require("frontend/views/mantenedor.php");
+    require("frontend/views/mantenedor.html");
     exit();
 ?>
