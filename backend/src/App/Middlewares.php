@@ -51,18 +51,3 @@ $beforeMiddleware = function (Request $request, RequestHandler $handler) {
 			->withStatus($codigo_http);
 	}
 };
-
-
-/**
- * FUNCIÓN...
- *
- * @param  ServerRequest  $request PSR-7 request
- * @param  RequestHandler $handler PSR-15 request handler
- *
- * @return Response
- */
-$afterMiddleware = function ($request, $handler) {
-	$response = $handler->handle($request);
-	$response->getBody()->write('AFTER');
-	return $response;
-};
