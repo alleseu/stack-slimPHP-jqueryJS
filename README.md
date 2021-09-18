@@ -7,7 +7,7 @@
 
 ___
 ### Requisitos para instalar la aplicación
-- Clonar proyecto con el nombre del repositorio por defecto. Si desea renombrarlo, debe cambiar la ruta base del archivo `App.php` ubicado en el directorio `backend/src/App` y la ruta base del archivo `principal.js` ubicado en el directorio `frontend/views/js`.
+- Clonar proyecto con el nombre `stack`. Si desea renombrarlo, debe cambiar la ruta base del archivo `App.php` ubicado en el directorio `backend/src/App` y la ruta base del archivo `principal.js` ubicado en el directorio `frontend/views/js`.
 - Crear una base de datos en Mysql con el nombre `crud`. Luego, debe importar el archivo `database.sql` ubicado en el directorio `backend/resource`.
 - Instalar los paquetes especificados en el archivo `composer.json` ubicado en el directorio `backend` con:
 
